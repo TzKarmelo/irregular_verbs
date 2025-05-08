@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irregular Verbs</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Irregular Verbs</h1>
+    <button id="theme-toggle" class="theme-toggle">Switch to Dark Theme</button>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Infinitive</th>
+          <th>Past Simple</th>
+          <th>Past Participle</th>
+        </tr>
+      </thead>
+      <tbody id="verbs-table"></tbody>
+    </table>
+
+    <div id="loading-spinner" style="display: none; text-align: center; margin-top: 20px;">
+      <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+      <p>Loading...</p>
+    </div>
+
+    <div id="scroll-to-top" style="display: none; position: fixed; bottom: 20px; right: 30px; cursor: pointer; font-size: 2rem; color: #007bff;">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="./verbs.js"></script>
+
+    <script>
+      async function populateTable() {
+        const tableBody = document.getElementById("verbs-table");
+        const spinner = document.getElementById("loading-spinner");
+
+        spinner.style.display = "block";
+
+        const rows = verbs.map((verb, index) => {
+          const infinitivePronunciation = 
+            (verb.pronunciation && verb.pronunciation.infinitive) 
+              ? verb.pronunciation.infinitive 
+              : verb.infinitive;
+
+          const pastSimplePronunciation = 
+            (verb.pronunciation && verb.pronunciation.pastSimple) 
+              ? verb.pronunciation.pastSimple 
+              : verb.pastSimple;
+
+          const pastParticiplePronunciation = 
+            (verb.pronunciation && verb.pronunciation.pastParticiple) 
+              ? verb.pronunciation.pastParticiple 
+              : verb.pastParticiple;
+
+          return `
+            <tr>
+              <td>${index + 1}</td>
+              <td>
+                ${verb.infinitive}
+                <br>
+                <span class="translation">${verb.translation.infinitive}</span>
+                <i class="fas fa-volume-up speaker-icon" 
+                   onclick="playPronunciation('${verb.infinitive}', '${infinitivePronunciation}')">
+                </i>
+              </td>
+              <td>
+                ${verb.pastSimple}
+                <br>
+                <span class="translation">${verb.translation.pastSimple}</span>
+                <i class="fas fa-volume-up speaker-icon" 
+                   onclick="playPronunciation('${verb.pastSimple}', '${pastSimplePronunciation}')">
+                </i>
+              </td>
+              <td>
+                ${verb.pastParticiple}
+                <br>
+                <span class="translation">${verb.translation.pastParticiple}</span>
+                <i class="fas fa-volume-up speaker-icon" 
+                   onclick="playPronunciation('${verb.pastParticiple}', '${pastParticiplePronunciation}')">
+                </i>
+              </td>
+            </tr>
+          `;
+        });
+
+        spinner.style.display = "none";
+        tableBody.innerHTML = rows.join("");
+      }
+
+      populateTable();
+
+      function playPronunciation(text, pronunciation) {
+        const sanitizedText = (pronunciation || text).replace(/\//g, " ").replace(/ /g, ", ");
+        const utterance = new SpeechSynthesisUtterance(sanitizedText);
+        utterance.lang = "en-US";
+        utterance.rate = 0.4;
+        speechSynthesis.speak(utterance);
+      }
+
+      window.playPronunciation = playPronunciation;
+
+      const scrollToTopButton = document.getElementById("scroll-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          scrollToTopButton.style.display = "block";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+
+      scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      const themeToggleButton = document.getElementById("theme-toggle");
+      const rootElement = document.documentElement;
+
+      themeToggleButton.addEventListener("click", () => {
+        const isDarkTheme = rootElement.getAttribute("data-theme") === "dark";
+        if (isDarkTheme) {
+          rootElement.setAttribute("data-theme", "light");
+          themeToggleButton.textContent = "Switch to Dark Theme";
+        } else {
+          rootElement.setAttribute("data-theme", "dark");
+          themeToggleButton.textContent = "Switch to Light Theme";
+        }
+      });
+    </script>
+  </body>
+</html>
