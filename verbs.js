@@ -868,253 +868,421 @@ const verbs = [
     infinitive: "say",
     pastSimple: "said",
     pastParticiple: "said",
-    translation: "decir"
+    translation: {
+      infinitive: "decir",
+      pastSimple: "dijo",
+      pastParticiple: "dicho"
+    }
   },
   {
     infinitive: "see",
     pastSimple: "saw",
     pastParticiple: "seen",
-    translation: "ver"
+    translation: {
+      infinitive: "ver",
+      pastSimple: "vio",
+      pastParticiple: "visto"
+    }
   },
   {
     infinitive: "sell",
     pastSimple: "sold",
     pastParticiple: "sold",
-    translation: "vender"
+    translation: {
+      infinitive: "vender",
+      pastSimple: "vendió",
+      pastParticiple: "vendido"
+    }
   },
   {
     infinitive: "send",
     pastSimple: "sent",
     pastParticiple: "sent",
-    translation: "enviar"
+    translation: {
+      infinitive: "enviar",
+      pastSimple: "envió",
+      pastParticiple: "enviado"
+    }
   },
   {
     infinitive: "set",
     pastSimple: "set",
     pastParticiple: "set",
-    translation: "poner, colocar"
+    translation: {
+      infinitive: "poner, colocar",
+      pastSimple: "puso, colocó",
+      pastParticiple: "puesto, colocado"
+    }
   },
   {
     infinitive: "shake",
     pastSimple: "shook",
     pastParticiple: "shaken",
-    translation: "sacudir, agitar"
+    translation: {
+      infinitive: "sacudir, agitar",
+      pastSimple: "sacudió, agitó",
+      pastParticiple: "sacudido, agitado"
+    }
   },
   {
     infinitive: "shine",
     pastSimple: "shone",
     pastParticiple: "shone",
-    translation: "brillar"
+    translation: {
+      infinitive: "brillar",
+      pastSimple: "brilló",
+      pastParticiple: "brillado"
+    }
   },
   {
     infinitive: "shoot",
     pastSimple: "shot",
     pastParticiple: "shot",
-    translation: "disparar"
+    translation: {
+      infinitive: "disparar",
+      pastSimple: "disparó",
+      pastParticiple: "disparado"
+    }
   },
   {
     infinitive: "show",
     pastSimple: "showed",
     pastParticiple: "shown/showed",
-    translation: "mostrar"
+    translation: {
+      infinitive: "mostrar",
+      pastSimple: "mostró",
+      pastParticiple: "mostrado"
+    }
   },
   {
     infinitive: "shut",
     pastSimple: "shut",
     pastParticiple: "shut",
-    translation: "cerrar"
+    translation: {
+      infinitive: "cerrar",
+      pastSimple: "cerró",
+      pastParticiple: "cerrado"
+    }
   },
   {
     infinitive: "sing",
     pastSimple: "sang",
     pastParticiple: "sung",
-    translation: "cantar"
+    translation: {
+      infinitive: "cantar",
+      pastSimple: "cantó",
+      pastParticiple: "cantado"
+    }
   },
   {
     infinitive: "sink",
     pastSimple: "sank",
     pastParticiple: "sunk",
-    translation: "hundir(se)"
+    translation: {
+      infinitive: "hundir(se)",
+      pastSimple: "hundió",
+      pastParticiple: "hundido"
+    }
   },
   {
     infinitive: "sit",
     pastSimple: "sat",
     pastParticiple: "sat",
-    translation: "sentarse"
+    translation: {
+      infinitive: "sentarse",
+      pastSimple: "se sentó",
+      pastParticiple: "sentado"
+    }
   },
   {
     infinitive: "sleep",
     pastSimple: "slept",
     pastParticiple: "slept",
-    translation: "dormir"
+    translation: {
+      infinitive: "dormir",
+      pastSimple: "durmió",
+      pastParticiple: "dormido"
+    }
   },
   {
     infinitive: "speak",
     pastSimple: "spoke",
     pastParticiple: "spoken",
-    translation: "hablar"
+    translation: {
+      infinitive: "hablar",
+      pastSimple: "habló",
+      pastParticiple: "hablado"
+    }
   },
   {
     infinitive: "spend",
     pastSimple: "spent",
     pastParticiple: "spent",
-    translation: "gastar, pasar (tiempo)"
+    translation: {
+      infinitive: "gastar, pasar (tiempo)",
+      pastSimple: "gastó, pasó",
+      pastParticiple: "gastado, pasado"
+    }
   },
   {
     infinitive: "spill",
     pastSimple: "spilt/spilled",
     pastParticiple: "spilt/spilled",
-    translation: "derramar"
+    translation: {
+      infinitive: "derramar",
+      pastSimple: "derramó",
+      pastParticiple: "derramado"
+    }
   },
   {
     infinitive: "spin",
     pastSimple: "spun",
     pastParticiple: "spun",
-    translation: "girar, hilar"
+    translation: {
+      infinitive: "girar, hilar",
+      pastSimple: "giró, hiló",
+      pastParticiple: "girado, hilado"
+    }
   },
   {
     infinitive: "spit",
     pastSimple: "spat",
     pastParticiple: "spat",
-    translation: "escupir"
+    translation: {
+      infinitive: "escupir",
+      pastSimple: "escupió",
+      pastParticiple: "escupido"
+    }
   },
   {
     infinitive: "split",
     pastSimple: "split",
     pastParticiple: "split",
-    translation: "dividir, partir"
+    translation: {
+      infinitive: "dividir, partir",
+      pastSimple: "dividió, partió",
+      pastParticiple: "dividido, partido"
+    }
   },
   {
     infinitive: "spread",
     pastSimple: "spread",
     pastParticiple: "spread",
-    translation: "extender(se)"
+    translation: {
+      infinitive: "extender(se)",
+      pastSimple: "extendió",
+      pastParticiple: "extendido"
+    }
   },
   {
     infinitive: "stand",
     pastSimple: "stood",
     pastParticiple: "stood",
-    translation: "estar de pie"
+    translation: {
+      infinitive: "estar de pie",
+      pastSimple: "estuvo de pie",
+      pastParticiple: "estado de pie"
+    }
   },
   {
     infinitive: "steal",
     pastSimple: "stole",
     pastParticiple: "stolen",
-    translation: "robar"
+    translation: {
+      infinitive: "robar",
+      pastSimple: "robó",
+      pastParticiple: "robado"
+    }
   },
   {
     infinitive: "stick",
     pastSimple: "stuck",
     pastParticiple: "stuck",
-    translation: "pegar(se), adherir(se)"
+    translation: {
+      infinitive: "pegar(se), adherir(se)",
+      pastSimple: "pegó, se adhirió",
+      pastParticiple: "pegado, adherido"
+    }
   },
   {
     infinitive: "sting",
     pastSimple: "stung",
     pastParticiple: "stung",
-    translation: "picar"
+    translation: {
+      infinitive: "picar",
+      pastSimple: "picó",
+      pastParticiple: "picado"
+    }
   },
   {
     infinitive: "stink",
     pastSimple: "stank",
     pastParticiple: "stunk",
-    translation: "apestar"
+    translation: {
+      infinitive: "apestar",
+      pastSimple: "apestó",
+      pastParticiple: "apestando"
+    }
   },
   {
     infinitive: "strike",
     pastSimple: "struck",
     pastParticiple: "struck",
-    translation: "golpear"
+    translation: {
+      infinitive: "golpear",
+      pastSimple: "golpeó",
+      pastParticiple: "golpeado"
+    }
   },
   {
     infinitive: "swear",
     pastSimple: "swore",
     pastParticiple: "sworn",
-    translation: "jurar"
+    translation: {
+      infinitive: "jurar",
+      pastSimple: "juró",
+      pastParticiple: "jurado"
+    }
   },
   {
     infinitive: "sweep",
     pastSimple: "swept",
     pastParticiple: "swept",
-    translation: "barrer"
+    translation: {
+      infinitive: "barrer",
+      pastSimple: "barrió",
+      pastParticiple: "barrido"
+    }
   },
   {
     infinitive: "swim",
     pastSimple: "swam",
     pastParticiple: "swum",
-    translation: "nadar"
+    translation: {
+      infinitive: "nadar",
+      pastSimple: "nadó",
+      pastParticiple: "nadado"
+    }
   },
   {
     infinitive: "swing",
     pastSimple: "swung",
     pastParticiple: "swung",
-    translation: "columpiar(se)"
+    translation: {
+      infinitive: "columpiar(se)",
+      pastSimple: "se columpió",
+      pastParticiple: "columpiado"
+    }
   },
   {
     infinitive: "take",
     pastSimple: "took",
     pastParticiple: "taken",
-    translation: "tomar"
+    translation: {
+      infinitive: "tomar",
+      pastSimple: "tomó",
+      pastParticiple: "tomado"
+    }
   },
   {
     infinitive: "teach",
     pastSimple: "taught",
     pastParticiple: "taught",
-    translation: "enseñar"
+    translation: {
+      infinitive: "enseñar",
+      pastSimple: "enseñó",
+      pastParticiple: "enseñado"
+    }
   },
   {
     infinitive: "tear",
     pastSimple: "tore",
     pastParticiple: "torn",
-    translation: "rasgar, romper"
+    translation: {
+      infinitive: "rasgar, romper",
+      pastSimple: "rasgó, rompió",
+      pastParticiple: "rasgado, roto"
+    }
   },
   {
     infinitive: "tell",
     pastSimple: "told",
     pastParticiple: "told",
-    translation: "decir, contar"
+    translation: {
+      infinitive: "decir, contar",
+      pastSimple: "dijo, contó",
+      pastParticiple: "dicho, contado"
+    }
   },
   {
     infinitive: "think",
     pastSimple: "thought",
     pastParticiple: "thought",
-    translation: "pensar"
+    translation: {
+      infinitive: "pensar",
+      pastSimple: "pensó",
+      pastParticiple: "pensado"
+    }
   },
   {
     infinitive: "throw",
     pastSimple: "threw",
     pastParticiple: "thrown",
-    translation: "lanzar, arrojar"
+    translation: {
+      infinitive: "lanzar, arrojar",
+      pastSimple: "lanzó, arrojó",
+      pastParticiple: "lanzado, arrojado"
+    }
   },
   {
     infinitive: "understand",
     pastSimple: "understood",
     pastParticiple: "understood",
-    translation: "entender"
+    translation: {
+      infinitive: "entender",
+      pastSimple: "entendió",
+      pastParticiple: "entendido"
+    }
   },
   {
     infinitive: "wake",
     pastSimple: "woke",
     pastParticiple: "woken",
-    translation: "despertar(se)"
+    translation: {
+      infinitive: "despertar(se)",
+      pastSimple: "despertó",
+      pastParticiple: "despertado"
+    }
   },
   {
     infinitive: "wear",
     pastSimple: "wore",
     pastParticiple: "worn",
-    translation: "llevar puesto"
+    translation: {
+      infinitive: "llevar puesto",
+      pastSimple: "llevó puesto",
+      pastParticiple: "llevado puesto"
+    }
   },
   {
     infinitive: "win",
     pastSimple: "won",
     pastParticiple: "won",
-    translation: "ganar"
+    translation: {
+      infinitive: "ganar",
+      pastSimple: "ganó",
+      pastParticiple: "ganado"
+    }
   },
   {
     infinitive: "write",
     pastSimple: "wrote",
     pastParticiple: "written",
-    translation: "escribir"
+    translation: {
+      infinitive: "escribir",
+      pastSimple: "escribió",
+      pastParticiple: "escrito"
+    }
   }
 ];
 
