@@ -9,8 +9,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    
   </head>
   <body>
+    
+    <div class="header">
+      <button id="verb-tense-chart-btn" >Verb Tense Chart</button>
+      <button id="chart-tenses-btn" >Chart Tenses</button>
+      <hr>
+    </div>
     <h1>Irregular Verbs</h1>
     <button id="theme-toggle" class="theme-toggle">Switch to Dark Theme</button>
     <table>
@@ -35,102 +42,7 @@
     </div>
 
     <script src="./verbs.js"></script>
-
-    <script>
-      async function populateTable() {
-        const tableBody = document.getElementById("verbs-table");
-        const spinner = document.getElementById("loading-spinner");
-
-        spinner.style.display = "block";
-
-        const rows = verbs.map((verb, index) => {
-          const infinitivePronunciation = 
-            (verb.pronunciation && verb.pronunciation.infinitive) 
-              ? verb.pronunciation.infinitive 
-              : verb.infinitive;
-
-          const pastSimplePronunciation = 
-            (verb.pronunciation && verb.pronunciation.pastSimple) 
-              ? verb.pronunciation.pastSimple 
-              : verb.pastSimple;
-
-          const pastParticiplePronunciation = 
-            (verb.pronunciation && verb.pronunciation.pastParticiple) 
-              ? verb.pronunciation.pastParticiple 
-              : verb.pastParticiple;
-
-          return `
-            <tr>
-              <td>${index + 1}</td>
-              <td>
-                ${verb.infinitive}
-                <br>
-                <span class="translation">${verb.translation.infinitive}</span>
-                <i class="fas fa-volume-up speaker-icon" 
-                   onclick="playPronunciation('${verb.infinitive}', '${infinitivePronunciation}')">
-                </i>
-              </td>
-              <td>
-                ${verb.pastSimple}
-                <br>
-                <span class="translation">${verb.translation.pastSimple}</span>
-                <i class="fas fa-volume-up speaker-icon" 
-                   onclick="playPronunciation('${verb.pastSimple}', '${pastSimplePronunciation}')">
-                </i>
-              </td>
-              <td>
-                ${verb.pastParticiple}
-                <br>
-                <span class="translation">${verb.translation.pastParticiple}</span>
-                <i class="fas fa-volume-up speaker-icon" 
-                   onclick="playPronunciation('${verb.pastParticiple}', '${pastParticiplePronunciation}')">
-                </i>
-              </td>
-            </tr>
-          `;
-        });
-
-        spinner.style.display = "none";
-        tableBody.innerHTML = rows.join("");
-      }
-
-      populateTable();
-
-      function playPronunciation(text, pronunciation) {
-        const sanitizedText = (pronunciation || text).replace(/\//g, " ").replace(/ /g, ", ");
-        const utterance = new SpeechSynthesisUtterance(sanitizedText);
-        utterance.lang = "en-US";
-        speechSynthesis.speak(utterance);
-      }
-
-      window.playPronunciation = playPronunciation;
-
-      const scrollToTopButton = document.getElementById("scroll-to-top");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) {
-          scrollToTopButton.style.display = "block";
-        } else {
-          scrollToTopButton.style.display = "none";
-        }
-      });
-
-      scrollToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      const themeToggleButton = document.getElementById("theme-toggle");
-      const rootElement = document.documentElement;
-
-      themeToggleButton.addEventListener("click", () => {
-        const isDarkTheme = rootElement.getAttribute("data-theme") === "dark";
-        if (isDarkTheme) {
-          rootElement.setAttribute("data-theme", "light");
-          themeToggleButton.textContent = "Switch to Dark Theme";
-        } else {
-          rootElement.setAttribute("data-theme", "dark");
-          themeToggleButton.textContent = "Switch to Light Theme";
-        }
-      });
-    </script>
+    <script src="./scripts.js"></script>
+    
   </body>
 </html>
