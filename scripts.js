@@ -147,7 +147,5 @@ window.playPronunciation = playPronunciation;
 
 // Call the function to populate the table
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname.includes("index.html")) {
-    populateTable();
-  }
+  populateTable();
 });
