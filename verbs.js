@@ -1,3 +1,5 @@
+// filepath: c:\Users\javier.espinosa\Desktop\Irregular verbs\irregular_verbs\scripts.js
+
 const verbs = [
   {
     infinitive: "arise",
